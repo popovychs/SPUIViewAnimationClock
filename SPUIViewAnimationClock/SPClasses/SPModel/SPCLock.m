@@ -34,23 +34,20 @@
         [self addSubview: _minutesArrow];
         [self addSubview: _secondsArrow];
     }
-    
     _calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    
     return  self;
 }
 
 - (void)start
 {
-    
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
                                                   target:self
-                                                selector:@selector(updateTime)
+                                                selector:@selector(updateClock)
                                                 userInfo:nil
-                                                 repeats:YES];
+                                            repeats:YES];
 }
 
-- (void)updateTime
+- (void)updateClock
 {
     self.currentDate = [NSDate date];
     
@@ -58,14 +55,14 @@
                           delay:0.0f
                         options:UIViewAnimationOptionCurveLinear
                      animations:^ {
-                         [self updateHoursHand];
-                         [self updateMinutesHand];
-                         [self updateSecondsHand];
+                         [self updateHoursArrow];
+                         [self updateMinutesArrow];
+                         [self updateSecondsArrow];
                      }
                      completion:nil];
 }
 
-- (void)updateHoursHand
+- (void)updateHoursArrow
 {
     NSInteger degreesPerHour   = 30;
     NSInteger degreesPerMinute = 6;
@@ -79,7 +76,7 @@
     self.hoursArrow.transform = CGAffineTransformRotate(CGAffineTransformIdentity, hourRadianAngle);
 }
 
-- (void)updateMinutesHand
+- (void)updateMinutesArrow
 {
     NSInteger degreesPerMinute = 6;
     double degreesPerSecond = 1.2f;
@@ -93,7 +90,7 @@
     self.minutesArrow.transform = CGAffineTransformRotate(CGAffineTransformIdentity, minutesRadianAngle);
 }
 
-- (void)updateSecondsHand
+- (void)updateSecondsArrow
 {
     NSInteger degreesPerSecond = 6;
     
@@ -101,7 +98,6 @@
     
     self.secondsArrow.transform = CGAffineTransformRotate(CGAffineTransformIdentity, secondsRadianAngle);
 }
-
 
 - (NSInteger) hours
 {

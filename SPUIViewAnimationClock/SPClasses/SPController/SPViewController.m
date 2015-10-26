@@ -1,31 +1,31 @@
 //
-//  ViewController.m
+//  SPViewController.m
 //  SPUIViewAnimationClock
 //
-//  Created by popovychs on 26.10.15.
+//  Created by popovychs on 27.10.15.
 //  Copyright © 2015 popovychs. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SPViewController.h"
 #import "SPCLock.h"
 
-@interface ViewController ()
+@interface SPViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView * analogView;
 @property (strong, nonatomic) SPCLock * clockView;
 
 @end
 
-@implementation ViewController
+@implementation SPViewController
 
 - (void) viewDidLoad
 {
     [super viewDidLoad];
-
-    [self setClock];
+    
+    [self prepareClock];
 }
 
-- (void) setClock
+- (void) prepareClock
 {
     CGRect clockFrame = CGRectMake(0, 0, 250, 250);
     self.clockView = [[SPCLock alloc] initWithFrame:clockFrame];
