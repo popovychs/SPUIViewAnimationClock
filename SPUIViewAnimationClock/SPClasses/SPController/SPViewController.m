@@ -37,7 +37,7 @@
     
     [self.analogView addSubview:self.clockView];
     
-    [self.clockView start];
+    [self.clockView turnOn];
 }
 
 @end

@@ -17,6 +17,6 @@
 @property (strong,nonatomic) UIImageView *secondsArrow;
 
 -(id) initWithFrame:(CGRect)frame;
--(void) start;
+-(void) turnOn;
 
 @end

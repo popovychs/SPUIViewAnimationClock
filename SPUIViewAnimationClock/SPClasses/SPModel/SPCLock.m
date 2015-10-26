@@ -38,7 +38,7 @@
     return  self;
 }
 
-- (void)start
+- (void) turnOn
 {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
                                                   target:self
@@ -62,7 +62,7 @@
                      completion:nil];
 }
 
-- (void)updateHoursArrow
+- (void) updateHoursArrow
 {
     NSInteger degreesPerHour   = 30;
     NSInteger degreesPerMinute = 6;
@@ -76,7 +76,7 @@
     self.hoursArrow.transform = CGAffineTransformRotate(CGAffineTransformIdentity, hourRadianAngle);
 }
 
-- (void)updateMinutesArrow
+- (void) updateMinutesArrow
 {
     NSInteger degreesPerMinute = 6;
     double degreesPerSecond = 1.2f;
@@ -90,7 +90,7 @@
     self.minutesArrow.transform = CGAffineTransformRotate(CGAffineTransformIdentity, minutesRadianAngle);
 }
 
-- (void)updateSecondsArrow
+- (void) updateSecondsArrow
 {
     NSInteger degreesPerSecond = 6;
     
