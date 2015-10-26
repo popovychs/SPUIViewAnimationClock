@@ -13,6 +13,11 @@
 		3E4873451BDE2BE7004A991A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E4873431BDE2BE7004A991A /* Main.storyboard */; };
 		3E4873471BDE2BE7004A991A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E4873461BDE2BE7004A991A /* Assets.xcassets */; };
 		3E48734A1BDE2BE7004A991A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E4873481BDE2BE7004A991A /* LaunchScreen.storyboard */; };
+		3E4873531BDE3087004A991A /* SPCLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4873521BDE3087004A991A /* SPCLock.m */; };
+		3E48735A1BDE48B4004A991A /* clock-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4873561BDE48B3004A991A /* clock-background.png */; };
+		3E48735B1BDE48B4004A991A /* clock-hour-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4873571BDE48B4004A991A /* clock-hour-background.png */; };
+		3E48735C1BDE48B4004A991A /* clock-min-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4873581BDE48B4004A991A /* clock-min-background.png */; };
+		3E48735D1BDE48B4004A991A /* clock-sec-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4873591BDE48B4004A991A /* clock-sec-background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,12 @@
 		3E4873461BDE2BE7004A991A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E4873491BDE2BE7004A991A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E48734B1BDE2BE7004A991A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E4873511BDE3087004A991A /* SPCLock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPCLock.h; path = SPClasses/SPModel/SPCLock.h; sourceTree = "<group>"; };
+		3E4873521BDE3087004A991A /* SPCLock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPCLock.m; path = SPClasses/SPModel/SPCLock.m; sourceTree = "<group>"; };
+		3E4873561BDE48B3004A991A /* clock-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clock-background.png"; path = "Images/clock-background.png"; sourceTree = "<group>"; };
+		3E4873571BDE48B4004A991A /* clock-hour-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clock-hour-background.png"; path = "Images/clock-hour-background.png"; sourceTree = "<group>"; };
+		3E4873581BDE48B4004A991A /* clock-min-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clock-min-background.png"; path = "Images/clock-min-background.png"; sourceTree = "<group>"; };
+		3E4873591BDE48B4004A991A /* clock-sec-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "clock-sec-background.png"; path = "Images/clock-sec-background.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +73,8 @@
 				3E48733E1BDE2BE7004A991A /* AppDelegate.m */,
 				3E4873401BDE2BE7004A991A /* ViewController.h */,
 				3E4873411BDE2BE7004A991A /* ViewController.m */,
+				3E4873511BDE3087004A991A /* SPCLock.h */,
+				3E4873521BDE3087004A991A /* SPCLock.m */,
 				3E4873431BDE2BE7004A991A /* Main.storyboard */,
 				3E4873461BDE2BE7004A991A /* Assets.xcassets */,
 				3E4873481BDE2BE7004A991A /* LaunchScreen.storyboard */,
@@ -74,6 +87,10 @@
 		3E48733A1BDE2BE7004A991A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3E4873561BDE48B3004A991A /* clock-background.png */,
+				3E4873571BDE48B4004A991A /* clock-hour-background.png */,
+				3E4873581BDE48B4004A991A /* clock-min-background.png */,
+				3E4873591BDE48B4004A991A /* clock-sec-background.png */,
 				3E48733B1BDE2BE7004A991A /* main.m */,
 			);
 			name = "Supporting Files";
@@ -136,8 +153,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E48735B1BDE48B4004A991A /* clock-hour-background.png in Resources */,
 				3E48734A1BDE2BE7004A991A /* LaunchScreen.storyboard in Resources */,
 				3E4873471BDE2BE7004A991A /* Assets.xcassets in Resources */,
+				3E48735D1BDE48B4004A991A /* clock-sec-background.png in Resources */,
+				3E48735A1BDE48B4004A991A /* clock-background.png in Resources */,
+				3E48735C1BDE48B4004A991A /* clock-min-background.png in Resources */,
 				3E4873451BDE2BE7004A991A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +173,7 @@
 				3E4873421BDE2BE7004A991A /* ViewController.m in Sources */,
 				3E48733F1BDE2BE7004A991A /* AppDelegate.m in Sources */,
 				3E48733C1BDE2BE7004A991A /* main.m in Sources */,
+				3E4873531BDE3087004A991A /* SPCLock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
